@@ -1,0 +1,14 @@
+# Entrepôt DuckDB (régénéré par le pipeline)
+warehouse/warehouse.duckdb
+warehouse/warehouse.duckdb.wal
+
+# dbt
+warehouse/target/
+warehouse/dbt_packages/
+warehouse/logs/
+warehouse/.user.yml
+
+# Prefect / Python
+.prefect/
+__pycache__/
+.venv/

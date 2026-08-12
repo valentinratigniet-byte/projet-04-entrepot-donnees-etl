@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    description: Copie brute des 3 sources (PostgreSQL, calendrier généré, API météo), chargée par etl/extract.py.
+    tables:
+      - name: orders
+      - name: order_item
+      - name: customer
+      - name: product
+      - name: category
+      - name: calendar
+      - name: weather

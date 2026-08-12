@@ -1,0 +1,9 @@
+# Profil dbt-duckdb. L'entrepôt est un simple fichier local warehouse.duckdb
+# (peuplé par etl/extract.py). Chargé via DBT_PROFILES_DIR pointant sur ce dossier.
+entrepot:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: warehouse.duckdb
+      threads: 4

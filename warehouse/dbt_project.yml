@@ -1,0 +1,15 @@
+name: 'entrepot'
+version: '1.0.0'
+profile: 'entrepot'
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+
+models:
+  entrepot:
+    staging:
+      +materialized: view
+      +schema: staging
+    marts:
+      +materialized: table
+      +schema: marts
