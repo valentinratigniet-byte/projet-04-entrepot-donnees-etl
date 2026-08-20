@@ -8,6 +8,19 @@
 
 ## 🧩 3 sources → 1 entrepôt (DuckDB)
 
+```mermaid
+flowchart LR
+    PG[("PostgreSQL<br/>Projet 07")] -->|ATTACH postgres| RAW
+    CAL["Calendrier<br/>généré"] --> RAW
+    METEO["API Open-Meteo<br/>sans clé"] --> RAW
+    RAW[("raw")] -->|dbt| STG["staging<br/>6 vues"]
+    STG -->|dbt| MARTS["marts<br/>étoile fct_sales + dim_*"]
+    MARTS --> Q["Requêtes analytiques<br/>ventes × météo"]
+
+    style MARTS fill:#137A8B,color:#fff
+    style PG fill:#E4A93C,color:#1a1a1a
+```
+
 | Source | Type | Extraction |
 |---|---|---|
 | Ventes (base du [Projet 07](https://github.com/valentinratigniet-byte/projet-07-base-ecommerce)) | Base PostgreSQL | DuckDB attache Postgres (`ATTACH … TYPE postgres`) |
