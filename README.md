@@ -86,5 +86,5 @@ projet-04-entrepot-donnees-etl/
 
 ---
 
-*Projet 04 du [Portfolio Data](../). Cœur du profil Data Engineer : centraliser des
+*Projet 04 du [Portfolio Data](https://github.com/valentinratigniet-byte). Cœur du profil Data Engineer : centraliser des
 sources hétérogènes dans un entrepôt modélisé, orchestré et rejouable.*
