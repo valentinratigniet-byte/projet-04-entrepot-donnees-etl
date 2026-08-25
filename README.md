@@ -1,5 +1,7 @@
 # Projet 04 — Entrepôt de données & pipeline ETL multi-sources
 
+[![CI](https://github.com/valentinratigniet-byte/projet-04-entrepot-donnees-etl/actions/workflows/ci.yml/badge.svg)](https://github.com/valentinratigniet-byte/projet-04-entrepot-donnees-etl/actions/workflows/ci.yml)
+
 > Les données utiles vivent dans des systèmes séparés. Un Data Engineer les
 > **centralise dans un entrepôt** modélisé pour que les analystes travaillent vite
 > et juste. Ce projet ingère **3 sources hétérogènes**, les transforme en schéma en
