@@ -15,7 +15,12 @@ import duckdb
 ROOT = Path(__file__).resolve().parent.parent
 DB = ROOT / "warehouse" / "warehouse.duckdb"
 PG = "host=127.0.0.1 port=5433 dbname=ecommerce user=portfolio password=portfolio"
-START, END = "2024-08-01", "2026-08-31"
+START = "2024-08-01"
+# Bornée sur "aujourd'hui" plutôt qu'une date fixe : une borne figée finit
+# toujours par être dépassée (vécu réel -- calendrier plafonné au 2026-08-31,
+# les commandes du Projet 07 sont générées jusqu'à "maintenant" à chaque seed,
+# la CI a fini par produire des order_date sans date_key correspondante).
+END = (date.today() + timedelta(days=1)).isoformat()
 # L'archive météo ne couvre pas le futur (ni les ~5 derniers jours) : on plafonne.
 WEATHER_END = min(END, (date.today() - timedelta(days=7)).isoformat())
 LAT, LON = 48.85, 2.35   # Paris (météo de référence)
