@@ -41,10 +41,32 @@ erDiagram
     dim_date     ||--o{ fct_sales : date_key
     dim_product  ||--o{ fct_sales : product_key
     dim_customer ||--o{ fct_sales : customer_key
-    fct_sales { int order_id; int customer_key; int product_key; int date_key; numeric line_amount }
-    dim_date { int date_key; date date; int annee; text annee_mois; double temp_mean; double precip; bool est_pluvieux; text temp_bucket }
-    dim_product { int product_key; text category; numeric price }
-    dim_customer { int customer_key; text country }
+    fct_sales {
+        int order_id
+        int customer_key
+        int product_key
+        int date_key
+        numeric line_amount
+    }
+    dim_date {
+        int date_key
+        date date
+        int annee
+        text annee_mois
+        double temp_mean
+        double precip
+        bool est_pluvieux
+        text temp_bucket
+    }
+    dim_product {
+        int product_key
+        text category
+        numeric price
+    }
+    dim_customer {
+        int customer_key
+        text country
+    }
 ```
 
 **Point clé** : `dim_date` **fusionne 2 sources** — le calendrier généré + la météo
