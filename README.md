@@ -8,6 +8,8 @@
 > étoile, et les charge dans un **data warehouse interrogeable** — le tout
 > orchestré et **rejouable en une commande**.
 
+🗺️ **[Schéma du dépôt (GitDiagram)](https://gitdiagram.com/valentinratigniet-byte/projet-04-entrepot-donnees-etl)** : vue d'ensemble générée automatiquement à partir du code.
+
 ## 🧩 3 sources → 1 entrepôt (DuckDB)
 
 ```mermaid
